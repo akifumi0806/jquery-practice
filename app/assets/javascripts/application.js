@@ -26,41 +26,28 @@ $(function(){
     // 
     var duration = 300;
 
-    // images ----------------------------------------
-    var $images = $('#images p');
+    // buttons2 ----------------------------------------
+    $('#buttons2 button').each(function(index){
+        //var pos = Math.random() * 80 - 40;
+        var pos = index * 40 - 40;
+        $(this).css('top', pos);
+    })
+    .on('mouseover', function(){
+        var $btn = $(this).stop(true).animate({
+            backgroundColor: '#faee00',
+            color: '#000'
+        }, duration);
+        $btn.find('img:first-child').stop(true).animate({opacity: 0}, duration);
+        $btn.find('img:nth-child(2)').stop(true).animate({opacity: 1}, duration);
+    })
+    .on('mouseout', function(){
+        var $btn = $(this).stop(true).animate({
+            backgroundColor: '#fff',
+            color: '#01b169',
+        }, duration);
+        $btn.find('img:first-child').stop(true).animate({opacity: 1}, duration);
+        $btn.find('img:nth-child(2)').stop(true).animate({opacity: 0}, duration);
+    });
 
-    // images 1つ目の画像
-    $images.filter(':nth-child(1)')
-        .on('mouseover', function(){
-            $(this).find('strong, span').stop(true).animate({opacity: 1}, duration);
-        })
-        .on('mouseout', function(){
-            $(this).find('strong, span').stop(true).animate({opacity: 0}, duration);
-        });
-
-    // images 2つ目の画像
-    $images.filter(':nth-child(2)')
-        .on('mouseover', function(){
-            $(this).find('strong').stop(true).animate({opacity: 1, left: '0%'}, duration);
-            $(this).find('span').stop(true).animate({opacity: 1}, duration);
-        })
-        .on('mouseout', function(){
-            $(this).find('strong').stop(true).animate({opacity: 0, left: '-200%'}, duration);
-            $(this).find('span').stop(true).animate({opacity: 0}, duration);
-        });
-
-    // images 3つ目の画像
-    $images.filter(':nth-child(3)')
-        .on('mouseover', function(){
-            $(this).find('strong').stop(true).animate({bottom: '0px'}, duration);
-            $(this).find('span').stop(true).animate({opacity: 1}, duration);
-            $(this).find('img').stop(true).animate({top: '-20px'}, duration * 1.3);
-        })
-        .on('mouseout', function(){
-            $(this).find('strong').stop(true).animate({bottom: '-80px'}, duration);
-            $(this).find('span').stop(true).animate({opacity: 0}, duration);
-            $(this).find('img').stop(true).animate({top: '0px'}, duration);
-        });
 
 });
-
