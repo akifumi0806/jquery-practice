@@ -19,6 +19,9 @@
 /*
  * Base
  */
+/*
+ * Base
+ */
 html {
     font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
     font-size: 16px;
@@ -66,54 +69,39 @@ button {
     position: relative;
 }
 
-.page-main > div {
-    padding: 50px 0 100px;
+.page-main > aside {
+    background-color: rgba(0,0,0,0.8);
+    width: 350px;
+    height: 100%;
+    top: 0;
+    left: -350px;
+    position: fixed;
 }
 
-.page-main > div h2 {
-    color: #fff;
-    text-align: center;
-    margin: 0 0 50px;
-    font-weight: normal;
-    letter-spacing: 0.15em;
+.page-main > aside ul {
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    left: 114px;
+    position: absolute;
 }
 
-#buttons2 {
-    background-color: #01b169;
-    height: 340px;
+.page-main > aside li {
+    margin: 0 0 20px;
+    list-style: none;
 }
 
-#buttons2 .inner {
-    position: relative;
-    width: 976px;
-    margin: 0 auto;
-}
-
-#buttons2 button {
+.page-main > aside button {
+    background-color: rgba(0,0,0,0.8);
     display: block;
     position: absolute;
-    width: 224px;
-    height: 224px;
-    overflow: hidden;
-    padding: 0 0 35px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #01b169;
-    background-color: #fff;
+    top: 150px;
+    left: 350px;
+    width: 52px;
+    height: 132px;
+    margin: 0;
+    padding: 0;
     border: none;
-    border-radius: 112px;
-}
-#buttons2 button:nth-child(1) {
-    left: 10px;
-}
-#buttons2 button:nth-child(2) {
-    left: 254px;
-}
-#buttons2 button:nth-child(3) {
-    left: 498px;
-}
-#buttons2 button:nth-child(4) {
-    left: 742px;
 }
 
 .page-footer {
@@ -151,13 +139,6 @@ button {
     clear: both;
 }
 
-/* #button2 */
-#buttons2 button img:first-child {
-    position: absolute;
-}
-#buttons2 button img:nth-child(2) {
-    opacity: 0;
-}
 
 article,
 aside,
