@@ -24,7 +24,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 $(function(){
     // 
-    var duration = 300;
+    var duration = 310;
 
     // aside ----------------------------------------
     var $aside = $('.page-main > aside');
