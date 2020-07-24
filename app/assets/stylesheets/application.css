@@ -69,39 +69,37 @@ button {
     position: relative;
 }
 
-.page-main > aside {
-    background-color: rgba(0,0,0,0.8);
-    width: 350px;
-    height: 100%;
-    top: 0;
-    left: -350px;
-    position: fixed;
+.page-main > div {
+    padding: 50px 0 100px;
 }
 
-.page-main > aside ul {
+.page-main > div h2 {
+    color: #fff;
+    text-align: center;
+    margin: 0 0 50px;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+}
+
+#typo {
     margin: 0;
     padding: 0;
-    top: 50px;
-    left: 114px;
-    position: absolute;
+    background-color: #3498db;
+    font-weight: bold;
+    font-size: 110px;
+    color: #fff;
+    text-align: center;
+    line-height: 500px;
+    height: 500px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
-.page-main > aside li {
-    margin: 0 0 20px;
-    list-style: none;
-}
-
-.page-main > aside button {
-    background-color: rgba(0,0,0,0.8);
-    display: block;
-    position: absolute;
-    top: 150px;
-    left: 350px;
-    width: 52px;
-    height: 132px;
-    margin: 0;
-    padding: 0;
-    border: none;
+#typo .inner {
+    position: relative;
+    width: 976px;
+    margin: 0 auto;
 }
 
 .page-footer {
