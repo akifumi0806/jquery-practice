@@ -17,12 +17,9 @@
 //= require_tree .
 
 $(function(){
-	$('#typo').hover(
+	$('#typo').click(
 		function(){
 			$('#typo').css('color','red');
-		},
-		function(){
-			$('#typo').css('color','white');
 		}
 	);
 });
