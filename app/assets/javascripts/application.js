@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(function(){
-	$('#typo').click(
+	$('#typo').mouseover(
 		function(){
 			$('#typo').css('color','red');
 		}
